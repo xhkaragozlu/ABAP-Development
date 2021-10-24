@@ -12,7 +12,7 @@ CLASS lcl_class DEFINITION.
 
   PUBLIC SECTION.
     METHODS: get_data,
-             show_alv.
+      show_alv.
 
 ENDCLASS.
 
@@ -29,8 +29,8 @@ TYPES: BEGIN OF ty_flight,
 
 DATA gt_flight TYPE TABLE OF ty_flight.
 
-DATA: go_salv TYPE REF TO cl_salv_table,
-      go_smsg TYPE REF TO cx_salv_msg.
+DATA: go_salv_table TYPE REF TO cl_salv_table,
+      go_salv_msg   TYPE REF TO cx_salv_msg.
 
 *&---------------------------------------------------------------------*
 *&                S T A R T   O F   S E L E C T I O N
@@ -54,6 +54,7 @@ CLASS lcl_class IMPLEMENTATION.
 *
   METHOD get_data.
 
+*get data from db into the internal table
     SELECT carrid,
            connid,
            fldate,
@@ -67,17 +68,20 @@ CLASS lcl_class IMPLEMENTATION.
 
   METHOD show_alv.
 
+* creates and returns a reference to the object of the class
     TRY.
         cl_salv_table=>factory(
           IMPORTING
-            r_salv_table = go_salv
+            r_salv_table = go_salv_table
           CHANGING
             t_table      = gt_flight ).
 
-      CATCH cx_salv_msg INTO go_smsg.
+      CATCH cx_salv_msg INTO go_salv_msg.
+        MESSAGE go_salv_msg TYPE 'E'.
     ENDTRY.
 
-    go_salv->display( ).
+* to show the ALV report on the screen
+    go_salv_table->display( ).
 
   ENDMETHOD.
 

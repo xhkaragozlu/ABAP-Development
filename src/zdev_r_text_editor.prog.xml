@@ -56,11 +56,11 @@
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>TXT_COMMENTS</NAME>
-       <TEXT>Comments:</TEXT>
+       <TEXT>Text:</TEXT>
        <LINE>003</LINE>
        <COLUMN>006</COLUMN>
-       <LENGTH>009</LENGTH>
-       <VISLENGTH>009</VISLENGTH>
+       <LENGTH>005</LENGTH>
+       <VISLENGTH>005</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
@@ -69,14 +69,14 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>PUSH</TYPE>
-       <NAME>BTN_SAVE</NAME>
-       <TEXT>SAVE___________</TEXT>
+       <NAME>BTN_GET</NAME>
+       <TEXT>GET____________</TEXT>
        <LINE>017</LINE>
        <COLUMN>015</COLUMN>
        <LENGTH>015</LENGTH>
        <VISLENGTH>015</VISLENGTH>
        <HEIGHT>001</HEIGHT>
-       <PUSH_FCODE>&amp;SAVE</PUSH_FCODE>
+       <PUSH_FCODE>&amp;GET</PUSH_FCODE>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
       </RPY_DYFATC>
@@ -84,14 +84,14 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>PUSH</TYPE>
-       <NAME>BTN_LOAD</NAME>
-       <TEXT>LOAD___________</TEXT>
+       <NAME>BTN_SET</NAME>
+       <TEXT>SET____________</TEXT>
        <LINE>017</LINE>
        <COLUMN>037</COLUMN>
        <LENGTH>015</LENGTH>
        <VISLENGTH>015</VISLENGTH>
        <HEIGHT>001</HEIGHT>
-       <PUSH_FCODE>&amp;LOAD</PUSH_FCODE>
+       <PUSH_FCODE>&amp;SET</PUSH_FCODE>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
       </RPY_DYFATC>

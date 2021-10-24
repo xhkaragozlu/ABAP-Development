@@ -94,7 +94,7 @@ MODULE user_command_0100 INPUT.
 
       PERFORM exit_program.
 
-    WHEN '&SAVE'.
+    WHEN '&GET'.
 
 *  retrieve table from control
       CALL METHOD go_text_editor->get_text_as_r3table
@@ -109,7 +109,7 @@ MODULE user_command_0100 INPUT.
       IF sy-subrc NE 0.
       ENDIF.
 
-    WHEN '&LOAD'.
+    WHEN '&SET'.
 
 *  send table to control
       CALL METHOD go_text_editor->set_text_as_r3table
