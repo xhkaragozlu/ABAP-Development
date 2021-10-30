@@ -131,7 +131,7 @@ ENDMODULE.
 *&---------------------------------------------------------------------*
 FORM exit_program .
 
-*  destroy control.
+*  destroy control
   IF NOT go_text_editor IS INITIAL.
 
     CALL METHOD go_text_editor->free
