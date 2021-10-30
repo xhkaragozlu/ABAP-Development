@@ -68,7 +68,7 @@ CLASS lcl_class IMPLEMENTATION.
 
   METHOD show_alv.
 
-* creates and returns a reference to the object of the class
+* creates and returns a reference to the object of the class.
     TRY.
         cl_salv_table=>factory(
           IMPORTING
