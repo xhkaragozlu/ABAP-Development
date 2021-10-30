@@ -8,7 +8,7 @@ REPORT zdev_r_text_editor.
 
 CONSTANTS: c_line_length TYPE i VALUE 256.
 
-*  define table type for data exchange.
+*  define table type for data exchange
 TYPES: BEGIN OF ty_text_table,
          line(c_line_length) TYPE c,
        END OF ty_text_table.
