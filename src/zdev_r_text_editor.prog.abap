@@ -8,7 +8,7 @@ REPORT zdev_r_text_editor.
 
 CONSTANTS: c_line_length TYPE i VALUE 256.
 
-*  define table type for data exchange
+*  define table type for data exchange.
 TYPES: BEGIN OF ty_text_table,
          line(c_line_length) TYPE c,
        END OF ty_text_table.
@@ -37,7 +37,7 @@ MODULE status_0100 OUTPUT.
 
   IF go_text_editor IS INITIAL.
 
-*  set status
+*  set status.
     SET PF-STATUS 'STATUS100'.
 *  set titlebar
     SET TITLEBAR  'TTLBAR100'.
@@ -111,7 +111,7 @@ MODULE user_command_0100 INPUT.
 
     WHEN '&SET'.
 
-*  send table to control
+*  send table to control.
       CALL METHOD go_text_editor->set_text_as_r3table
         EXPORTING
           table = gt_text_table.
